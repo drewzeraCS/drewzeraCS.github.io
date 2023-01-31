@@ -1,0 +1,320 @@
+html{
+    height: 100%;
+    margin: auto;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans';
+
+}
+.navbar{
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+}
+#navbar__logo{
+    background-color: v;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-coloor: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.fa-gem{
+    margin-right:0.5rem;
+}
+
+.navbar__menu{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    text-align:center;
+
+
+}
+.navbar__item{
+    height: 80px;
+}
+
+.navbar__links{
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%
+
+}
+.navbar__btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+
+.navbar__links:hover{
+    color: #131;
+    transition: all 0.3 ease;
+    
+}
+
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+
+    }
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: black;
+    }
+    .navbar__menu.active{
+        background: black;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+
+    }
+    #navbar__logo{
+        padding-left: 25px;
+
+    }
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3 ease-in-out;
+        background: #fff;
+
+
+    }
+    .navbar__item{
+        width: 100%
+    }
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%,20%);
+
+    }
+    .navbar__btn{
+        padding-bottom: 2rem;
+
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0;
+    }
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Hero Section CSS */
+.main{
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 50px;
+
+}
+body {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 200vh;
+    background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
+    background-size: contain;
+    backdrop-filter:  brightness(200%);
+}
+.main__content h1{
+    font-size: 4rem;
+    background-color: #131;
+    background-size: 100%;
+    background-image: #131;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+
+.main__content h2{
+    font-size: 4rem;
+    background-color: #131;
+    background-size: 100%;
+    background-image: #131;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+.main__content h3 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+
+}
+.main__content p {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    -webkit-text-stroke: 1px black;
+
+}
+
+
+/* Recent Container Section */
+.recent__container{
+    width: 100%;
+    text-align: center;
+
+}
+.recent__container a{
+    color: white;
+    font-size: 5rem;
+    
+
+}
+
+/* Blog HTML */
+.blog__title h1{
+    color: white;
+}
+.post__container1{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    opacity: 0.8;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+.post__container2{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    opacity: 0.8;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+.blog__box{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 30px;
+}
+.float__container{
+    padding: 20px;
+}
+.float-child{
+    width:50%;
+    float:left;
+    padding: 20px;
+}
+.CSprojects__container{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    opacity: 0.8;
+    
+}
+.CSprojects__container h1{
+    text-decoration-line: underline;
+    font-size:50px;
+}
+.Artprojects__container{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    opacity: 0.8;
+}
